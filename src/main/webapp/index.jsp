@@ -18,6 +18,15 @@
 %>
 <%= request.getParameter("jab") %><br> page
 <%= request.getParameter("page") %>
+
+<h3>Using JSP Actions</h3>
+<jsp:useBean id="person" class="com.jephtersmart.beans.PersonBean" scope="request" >
+    <jsp:setProperty name="person" property="name"  value="Jephter Uzezi" />
+</jsp:useBean>
+<p>This is the value of my bean 
+    <jsp:getProperty name="person" property="name" />
+</p>
+
  
 </body>
 </html>
